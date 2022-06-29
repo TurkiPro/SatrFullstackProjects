@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Bookstore</title>
+
+    <style type="text/css">
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Create a navigation bar for different functions-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bookstore</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <!--Search option available through this-->
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-8" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <br>
+    <!--Add a new book section with its specific options-->
+    <h3>Add a New Book</h3>
+    <div class="Container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form action="submit" onsubmit="return AddBook()" id="AddBook">
+                    <input class="form-control" type="text" name="title" placeholder="Book Title..."
+                        required="required">
+                    <br>
+                    <input class="form-control" type="text" name="id" placeholder="Book ID..." required="required">
+                    <br>
+                    <input class="form-control" type="text" name="author" placeholder="Author's Name..."
+                        required="required">
+                    <br>
+                    <input class="form-control" type="text" name="price" placeholder="Price..." required="required">
+                    <br>
+                    <input class="form-control" type="text" name="quantity" placeholder="Amount of Books..."
+                        required="required">
+                    <br>
+
+                    <button class="btn btn-primary" type="submit">ADD</button>
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+
+        <div class="jumbotron text-center my-6">
+            <h3>Bookshelf</h3>
+
+            <div id="bookshelf">
+                <template class="book">
+                    <p>Book ID</p>
+                    <p>Book Title</p>
+                    <p>Book Author</p>
+                    <p>Book Price</p>
+                    <p>Book Quantity</p>
+                    <button class="btn btn-danger">Remove</button>
+                </template>
+            </div>
+        </div>
+
+
+
+
+        <script src="bookstore.js"></script>
+</body>
+
+</html>
